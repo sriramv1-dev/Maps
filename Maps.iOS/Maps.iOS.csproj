@@ -148,7 +148,19 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="MvvmLightLibsStd10">
+      <Version>5.4.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Maps">
+      <Version>3.4.0.1008975</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -156,5 +168,13 @@
       <Project>{D2CD0395-54E1-44ED-B2C9-F1F41D548508}</Project>
       <Name>Maps</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ico_Back.png" />
+    <BundleResource Include="Resources\Ico_Back%402x.png" />
+    <BundleResource Include="Resources\Ico_Back%403x.png" />
+    <BundleResource Include="Resources\BG_Full_Gray.png" />
+    <BundleResource Include="Resources\BG_Full_Gray%402x.png" />
+    <BundleResource Include="Resources\BG_Full_Gray%403x.png" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" x:Class="Maps.Views.MapsPage">
+    <ContentPage.Content>
+        <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#808080">
+            <ffimageloading:CachedImage AbsoluteLayout.LayoutBounds="0.1,0.1,0.07,0.07" 
+                                        AbsoluteLayout.LayoutFlags="All" Source="Ico_Back.png" 
+                                        WidthRequest="20" Aspect="AspectFit" HorizontalOptions="Start" />
+            <Button Text="" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0,0,0.2,0.1" AbsoluteLayout.LayoutFlags="All" Clicked="Back_Clicked" />
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0.3,1,0.6" AbsoluteLayout.LayoutFlags="All" 
+                         HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Padding="0">
+                <maps:Map WidthRequest="500" HeightRequest="700" x:Name="MyMap" IsShowingUser="true" MapType="Hybrid" />
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
