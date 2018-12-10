@@ -24,6 +24,9 @@ namespace Maps.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            App.ScreenWidth = (int)UIScreen.MainScreen.Bounds.Width;
+            App.ScreenHeight = (int)UIScreen.MainScreen.Bounds.Height;
+
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             Xamarin.FormsMaps.Init();
             LoadApplication(new App());

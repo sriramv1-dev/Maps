@@ -8,12 +8,32 @@ namespace Maps
 {
     public partial class App : Application
     {
+        static public int ScreenWidth;
+        static public int ScreenHeight;
+        public static double DisplayScreenWidth = 0f;
+        public static double DisplayScreenHeight = 0f;
+        public static double DisplayScaleFactor = 0f;
         public App()
         {
             InitializeComponent();
-
-            //MainPage = new MainPage();
+            InitStaticResources();
             MainPage = new MapsPage();
+        }
+
+        public void InitStaticResources()
+        {
+            try
+            {
+                string ScreenDetails = Device.RuntimePlatform + " Device Screen Size:\n" +
+                    $"Width: {DisplayScreenWidth}\n" +
+                    $"Height: {DisplayScreenHeight}\n" +
+                    $"Scale Factor: {DisplayScaleFactor}";
+                Constants.Resources.Init();
+            }
+            catch (Exception ex)
+            {
+                var msg = ex.Message;
+            }
         }
 
         protected override void OnStart()
